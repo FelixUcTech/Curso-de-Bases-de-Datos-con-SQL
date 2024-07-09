@@ -43,3 +43,12 @@ CREATE TABLE STUDENT_COURSE (
     FOREIGN KEY (COURSESID) REFERENCES COURSES(COURSESID)  -- Y aquí, que el COURSESID corresponda a un curso existente en la tabla COURSES.
 );
 
+-- Insertar datos en la tabla STUDENTS
+INSERT INTO STUDENTS (STUDENTID, FIRSTNAME, LASTNAME, AGE, EMAIL)
+VALUES (1, 'Juan', 'Pérez', 20, 'juan.perez@example.com');
+INSERT INTO STUDENTS (STUDENTID, FIRSTNAME, LASTNAME, AGE, EMAIL)
+VALUES (2, 'María', 'Gómez', 22, 'maria.gomez@example.com');
+INSERT INTO STUDENTS (STUDENTID, FIRSTNAME, LASTNAME, AGE, EMAIL)
+VALUES (3, 'Pedro', 'Rodríguez', 21, 'pedro.rodriguez@example.com');
+
+SELECT * FROM STUDENTS;
