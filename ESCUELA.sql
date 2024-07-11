@@ -53,3 +53,4 @@ VALUES (3, 'Pedro', 'Rodríguez', 21, 'pedro.rodriguez@example.com');
 
 SELECT * FROM STUDENTS;
 
+--este es una prueba    
