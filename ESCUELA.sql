@@ -52,3 +52,4 @@ INSERT INTO STUDENTS (STUDENTID, FIRSTNAME, LASTNAME, AGE, EMAIL)
 VALUES (3, 'Pedro', 'Rodríguez', 21, 'pedro.rodriguez@example.com');
 
 SELECT * FROM STUDENTS;
+
