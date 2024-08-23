@@ -5,3 +5,64 @@ El CRUD (acrónimo de "Create, Read, Update, Delete") es un conjunto de operacio
 💡 Recuerda que puedes usar el comando DELETE FROM para eliminar un registro en una tabla. Para ejecutar una consulta DELETE lo puedes hacer de la siguiente manera: sql DELETE FROM table WHERE condition;
 
 💡 Recuerda que puedes usar el comando UPDATE para actualizar un registro en una tabla. Para ejecutar una consulta UPDATE lo puedes hacer de la siguiente manera: sql UPDATE table SET column1 = value1, column2 = value2, ... WHERE condition;
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+WHERE
+Cuando tenemos dudas de donde consultar, es importnate entender que el where acota el alcance de nuestro analisis, esto puede estar dado por las reglas del negocio o los requerimientos del cliente
+SELECT
+Aplica que no siempre es necesario hacer la extracción de todas las columnas para nuestro analisis y cuando hablamos de BIGDATA  es prudente no hacer una consulta tan general.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Business Intelligence (BI), o Inteligencia de Negocios en español, es un conjunto de estrategias, tecnologías, aplicaciones y procesos que se utilizan para recolectar, integrar, analizar y presentar datos empresariales. El objetivo de la BI es ayudar a las organizaciones a tomar decisiones informadas basadas en datos.
+
+¿Qué implica Business Intelligence?
+Recolección de datos: BI implica reunir datos de varias fuentes de la empresa, como sistemas de ventas, CRM, ERP, hojas de cálculo, y más. Esto puede incluir datos financieros, datos de ventas, datos de producción, etc.
+
+Almacenamiento de datos: Los datos recolectados se almacenan en bases de datos o almacenes de datos (data warehouses), que están diseñados para facilitar el análisis y la recuperación eficiente de la información.
+
+Transformación y limpieza de datos: Los datos brutos a menudo se limpian y transforman para garantizar que estén completos, precisos y en un formato adecuado para el análisis.
+
+Análisis de datos: Una vez que los datos están preparados, se utilizan diversas técnicas de análisis para descubrir patrones, tendencias y relaciones. Esto puede incluir análisis estadístico, minería de datos (data mining), análisis predictivo, y análisis de big data.
+
+Visualización de datos: Los resultados del análisis se presentan en formatos comprensibles y fáciles de interpretar, como dashboards (tableros de control), gráficos, informes, y cuadros. Las herramientas de visualización de datos ayudan a los usuarios a ver tendencias, patrones y detalles en los datos.
+
+Toma de decisiones: Con BI, las organizaciones pueden tomar decisiones basadas en datos precisos y actuales, lo que puede llevar a mejoras en la eficiencia operativa, la satisfacción del cliente, la rentabilidad, y otras áreas clave.
+
+¿Por qué es importante Business Intelligence?
+Mejora la toma de decisiones: Permite a los gerentes y líderes de una empresa tomar decisiones más informadas y basadas en datos.
+Aumenta la eficiencia operativa: Ayuda a identificar áreas de mejora en los procesos de negocio.
+Identificación de oportunidades de negocio: Detecta nuevas oportunidades de mercado y permite a la empresa mantenerse competitiva.
+Seguimiento de rendimiento: Permite a las empresas monitorear sus objetivos y métricas de rendimiento clave (KPIs) en tiempo real.
+Herramientas de Business Intelligence
+Algunas de las herramientas más populares de BI incluyen:
+
+Tableau: Conocido por sus capacidades de visualización de datos.
+Power BI: Una herramienta de Microsoft que integra BI con otras aplicaciones de Office.
+QlikView: Ofrece análisis de datos intuitivos y visualizaciones interactivas.
+SAP BusinessObjects: Una suite de aplicaciones de BI para un análisis amplio.
+Looker: Una plataforma de análisis de datos que trabaja bien con grandes volúmenes de datos y múltiples fuentes.
+En resumen, Business Intelligence permite a las empresas transformar datos en información accionable, lo que les ayuda a tomar decisiones estratégicas y tácticas más efectivas.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+La cláusula GROUP BY en SQL se utiliza para agrupar filas que tienen valores idénticos en una o más columnas y permite realizar cálculos agregados en cada grupo, como sumas, promedios, conteos, etc.
+
+¿Cómo funciona GROUP BY?
+Agrupación de datos: GROUP BY agrupa los resultados de una consulta SQL en grupos basados en uno o más columnas especificadas. Cada grupo contiene todas las filas que tienen el mismo valor en las columnas seleccionadas para la agrupación.
+
+Cálculos agregados: Después de agrupar los datos, se pueden aplicar funciones de agregación como SUM(), COUNT(), AVG(), MIN(), y MAX() para realizar cálculos en cada grupo.
+
+Ejemplo básico de uso
+Supongamos que tenemos una tabla llamada SALES con las columnas ProductID, Quantity, y Price. Si queremos saber cuántas unidades de cada producto se han vendido, usaríamos GROUP BY junto con la función SUM():
+
+SELECT ProductID, SUM(Quantity) AS TotalSold
+FROM SALES
+GROUP BY ProductID;
+
+Explicación del ejemplo:
+
+SELECT ProductID, SUM(Quantity) AS TotalSold: Selecciona la columna ProductID y calcula la suma de Quantity para cada producto.
+FROM SALES: Especifica la tabla de la que se están obteniendo los datos.
+GROUP BY ProductID: Agrupa las filas de la tabla SALES por cada ProductID, de manera que el cálculo de SUM(Quantity) se realiza para cada grupo de ProductID.
+El resultado de esta consulta será una lista de cada ProductID con la cantidad total vendida, agrupando todos los registros que corresponden al mismo producto.

@@ -21,4 +21,3 @@ CREATE TABLE PRODUCTO (
     IDPRODUCTO VARCHAR(20),      -- Identificador del producto (cadena de hasta 20 caracteres)
     DESCRIPCION TEXT             -- Descripción del producto (texto largo)
 );
-
