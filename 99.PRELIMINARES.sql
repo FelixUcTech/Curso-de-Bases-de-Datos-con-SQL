@@ -1,4 +1,3 @@
-
 --Para poder actualizar un datos
 UPDATE COURSES --El ejemplo manda a llamar la Tabla COURSES
 SET COURSESNAME= "Matemática Avanzada" --Si solo dejamos esta instrucción el nombre de todos los cursos podría sobre escribirse por eso siempre es necesrio especificar donde estamos seteando ese nuevo valor
@@ -15,4 +14,11 @@ SELECT * FROM COURSES;
 --SINTAXIS DELETE *  FROM USERS   + GROUP BY
 --SINTAXIS DELETE *  FROM USERS   + ORDER BY
 --SINTAXIS DELETE *  FROM USERS   + HAVING 
+
+
+CREATE TABLE PRODUCTO (
+    PKPRODUCTO INT PRIMARY KEY,  -- Identificador único del producto (clave primaria)
+    IDPRODUCTO VARCHAR(20),      -- Identificador del producto (cadena de hasta 20 caracteres)
+    DESCRIPCION TEXT             -- Descripción del producto (texto largo)
+);
 
