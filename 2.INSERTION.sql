@@ -1,4 +1,4 @@
---EJEMPLOS DE LOS INSERTS PARA LA TABLAS DE CLARADAS EN DOCUMENTO 1.TABLAS_ESCUELAS
+----EJEMPLOS DE LOS INSERTS PARA LA TABLAS DE CLARADAS EN DOCUMENTO 1.TABLAS_ESCUELAS
 -- Insertar datos en la tabla STUDENTS------------------------------------------------------------------------
 INSERT INTO STUDENTS (STUDENTID, FIRSTNAME, LASTNAME, AGE, EMAIL) VALUES (1, 'Juan', 'Pérez', 20, 'juan.perez@example.com');
 INSERT INTO STUDENTS (STUDENTID, FIRSTNAME, LASTNAME, AGE, EMAIL) VALUES (2, 'María', 'Gómez', 22, 'maria.gomez@example.com');
@@ -264,8 +264,7 @@ INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (15, 1
 INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (15, 18, '2023-03-15');
 INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (15, 24, '2023-04-05');
 INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (15, 25, '2023-05-21');
-
-
+--etc
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 -- Agregar más inserciones para los estudiantes 6 a 50  -- Esto no se puede hacer en SQL.lite
 
