@@ -1,0 +1,1 @@
+--Esta práctica representa un requermiento de información de acuerdo a la base de datos que estamos trabajando.
