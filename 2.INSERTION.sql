@@ -72,8 +72,100 @@ INSERT INTO TEACHER (TEACHERID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE, DIRECCIO
 INSERT INTO TEACHER (TEACHERID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE, DIRECCION, HIRE_DATE, SALARY) VALUES (18, 'Elena', 'Morales', 42, 'elena.morales@example.com', '555-8190', 'Av. del Norte 313', '2022-11-15', 48000.65);
 INSERT INTO TEACHER (TEACHERID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE, DIRECCION, HIRE_DATE, SALARY) VALUES (19, 'Anaa', 'Suárez', 46, 'hugo.suarez@example.com', '555-0213', 'Calle de la Estrella 414', '2004-04-12', 51000.70);
 INSERT INTO TEACHER (TEACHERID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE, DIRECCION, HIRE_DATE, SALARY) VALUES (20, 'Isabel', 'Herrera', 31, 'isabel.herrera@example.com', '555-2245', 'Av. del Sol 515', '2023-03-22', 43000.00);
+-- Inserción de cursos en la tabla COURSES
+INSERT INTO COURSES (COURSESID, COURSESNAME, DESCRIPCION, TEACHERID, DURATIONMINUTS)
+VALUES
+(1, 'Introducción a la Ciencia de Datos', 'Conceptos básicos y aplicaciones de la ciencia de datos.', 1, 180),
+(2, 'Fundamentos de Programación en Python', 'Introducción a la programación con Python.', 2, 200),
+(3, 'Matemáticas para Ciencia de Datos', 'Fundamentos matemáticos necesarios para la ciencia de datos.', 3, 220),
+(4, 'Estadística Descriptiva', 'Análisis estadístico básico para describir datos.', 4, 210),
+(5, 'Fundamentos de SQL', 'Conceptos básicos de SQL para gestionar bases de datos.', 5, 180),
+(6, 'Fundamentos de Bases de Datos Relacionales', 'Principios y diseño de bases de datos relacionales.', 6, 200),
+(7, 'Estructuras de Datos y Algoritmos', 'Fundamentos de estructuras de datos y algoritmos.', 7, 220),
+(8, 'Análisis Exploratorio de Datos', 'Técnicas para explorar y visualizar datos.', 8, 210),
+(9, 'Programación en R para Ciencia de Datos', 'Uso del lenguaje R para análisis de datos.', 9, 200),
+(10, 'Introducción a Big Data', 'Conceptos y herramientas básicas para Big Data.', 10, 230),
+(11, 'Manejo de Datos con Pandas', 'Uso de la librería Pandas en Python para análisis de datos.', 11, 220),
+(12, 'Visualización de Datos con Matplotlib y Seaborn', 'Técnicas para visualizar datos en Python.', 12, 200),
+(13, 'Data Warehousing y Modelado de Datos', 'Conceptos de almacén de datos y modelado.', 13, 250),
+(14, 'ETL y Procesamiento de Datos', 'Extracción, transformación y carga de datos.', 14, 240),
+(15, 'Trabajo con APIs y Web Scraping', 'Obtención de datos mediante APIs y técnicas de scraping.', 15, 220),
+(16, 'Introducción a Hadoop', 'Uso de Hadoop para el procesamiento de datos distribuidos.', 16, 230),
+(17, 'Procesamiento de Datos con Spark', 'Procesamiento de datos con Apache Spark.', 17, 240),
+(18, 'Fundamentos de Data Engineering', 'Conceptos básicos del trabajo de un Data Engineer.', 18, 250),
+(19, 'Data Lakes y Data Warehouses', 'Diferencias y uso de Data Lakes y Data Warehouses.', 19, 260),
+(20, 'Introducción a la Arquitectura de Datos', 'Principios de diseño de arquitecturas de datos.', 20, 240),
+(21, 'Bases de Datos NoSQL', 'Conceptos y uso de bases de datos NoSQL.', 21, 250),
+(22, 'Optimización de Consultas SQL', 'Técnicas para optimizar consultas SQL.', 22, 230),
+(23, 'Integración de Datos', 'Métodos para integrar datos de diversas fuentes.', 23, 240),
+(24, 'Seguridad de Datos y Privacidad', 'Aspectos de seguridad y privacidad en la gestión de datos.', 24, 250),
+(25, 'Fundamentos de Machine Learning', 'Conceptos básicos de aprendizaje automático.', 25, 260),
+(26, 'Modelado Predictivo', 'Técnicas para construir modelos predictivos.', 26, 270),
+(27, 'Data Pipeline con Airflow', 'Uso de Apache Airflow para gestionar pipelines de datos.', 27, 260),
+(28, 'Desarrollo de Microservicios para Data Engineering', 'Creación de microservicios en el contexto de ingeniería de datos.', 28, 270),
+(29, 'Análisis de Datos en Tiempo Real', 'Métodos para analizar datos en tiempo real.', 29, 260),
+(30, 'Procesamiento de Datos en Streaming', 'Procesamiento de datos en streaming con herramientas como Kafka.', 30, 270),
+(31, 'Manejo de Datos en la Nube (AWS, Azure, GCP)', 'Gestión de datos en plataformas en la nube.', 31, 280),
+(32, 'Automatización de Procesos de Datos', 'Automatización de flujos de trabajo de datos.', 32, 270),
+(33, 'Uso Avanzado de SQL en Data Engineering', 'Aplicaciones avanzadas de SQL en ingeniería de datos.', 33, 280),
+(34, 'Diseño de Arquitecturas Escalables', 'Creación de arquitecturas de datos escalables.', 34, 290),
+(35, 'Implementación de Soluciones de BI', 'Desarrollo e implementación de soluciones de Business Intelligence.', 35, 280),
+(36, 'Modelos de Datos Avanzados', 'Diseño y gestión de modelos de datos avanzados.', 36, 290),
+(37, 'Optimización y Escalabilidad de Data Pipelines', 'Mejoras en la eficiencia y escalabilidad de pipelines de datos.', 37, 300),
+(38, 'Data Engineering para Inteligencia Artificial', 'Aplicación de ingeniería de datos en proyectos de IA.', 38, 290),
+(39, 'Análisis de Grandes Volúmenes de Datos', 'Técnicas para analizar grandes volúmenes de datos.', 39, 300),
+(40, 'Tendencias y Tecnologías Futuras en Data Engineering', 'Exploración de las últimas tendencias y tecnologías en ingeniería de datos.', 40, 310);
+-- Diferencias entre inserción masiva e inserciones individuales
 
---
+-- Inserción Masiva:
+-- 1. Eficiencia y Rendimiento: 
+-- La sentencia de inserción masiva (INSERT INTO ... VALUES (...) para múltiples filas) 
+-- es generalmente más eficiente. Realiza una sola operación de inserción con múltiples 
+-- registros en un único comando, lo que reduce el número de transacciones y el tiempo 
+-- necesario para ejecutar la operación.
+-- 
+-- 2. Complejidad y Mantenimiento:
+-- Las inserciones masivas tienden a ser más limpias y menos propensas a errores de 
+-- transcripción, especialmente cuando se manejan grandes volúmenes de datos. Es más 
+-- fácil modificar o actualizar los datos en un solo comando en comparación con múltiples 
+-- comandos.
+-- 
+-- 3. Transacciones y Control de Errores:
+-- Si ocurre un error en una inserción masiva, el manejo de errores puede ser más complicado, 
+-- pero algunas bases de datos permiten continuar con la inserción de las filas restantes o 
+-- revertir todas las inserciones si se produce un error crítico.
+-- 
+-- 4. Transacciones y Bloqueos:
+-- Puede reducir la cantidad de bloqueos en la base de datos, ya que se realiza una sola 
+-- transacción con múltiples registros en lugar de múltiples transacciones separadas.
+-- 
+-- Inserciones Individuales:
+-- 1. Eficiencia y Rendimiento:
+-- Cada comando INSERT INTO para una sola fila representa una transacción separada. Esto 
+-- puede resultar en una sobrecarga significativa si se realizan muchas inserciones, 
+-- ya que cada una implica comunicación con el servidor de base de datos, lo que puede 
+-- ser menos eficiente en términos de tiempo y recursos.
+-- 
+-- 2. Complejidad y Mantenimiento:
+-- Insertar datos de forma individual puede ser más propenso a errores si hay un gran número 
+-- de inserciones. También es menos conveniente para editar o mantener los datos si es 
+-- necesario realizar cambios en varias inserciones.
+-- 
+-- 3. Transacciones y Control de Errores:
+-- Los errores en las inserciones individuales pueden ser más fáciles de identificar y manejar, 
+-- ya que cada comando es independiente. Esto facilita la resolución de problemas específicos 
+-- con una sola fila de datos.
+-- 
+-- 4. Transacciones y Bloqueos:
+-- Cada inserción puede generar un bloqueo separado, lo que podría afectar el rendimiento 
+-- si se están realizando muchas inserciones al mismo tiempo en un entorno con alta concurrencia.
+
+-- Resumen:
+-- Inserción Masiva es preferible para grandes volúmenes de datos debido a su eficiencia y 
+-- menor sobrecarga transaccional.
+-- Inserciones Individuales pueden ser útiles para casos donde se manejan pocas filas o 
+-- se necesita un control más granular sobre cada inserción.
+
 INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (1, 101, '2024-01-10');
 INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (2, 102, '2024-01-12');
 INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (3, 101, '2024-01-15');
