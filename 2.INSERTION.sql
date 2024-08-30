@@ -50,7 +50,7 @@ INSERT INTO STUDENTS (STUDENTID, FIRSTNAME, LASTNAME, AGE, EMAIL) VALUES (47, 'A
 INSERT INTO STUDENTS (STUDENTID, FIRSTNAME, LASTNAME, AGE, EMAIL) VALUES (48, 'Gonzalo', 'Cano', 23, 'gonzalo.cano@example.com');
 INSERT INTO STUDENTS (STUDENTID, FIRSTNAME, LASTNAME, AGE, EMAIL) VALUES (49, 'Elisa', 'Correa', 21, 'elisa.correa@example.com');
 INSERT INTO STUDENTS (STUDENTID, FIRSTNAME, LASTNAME, AGE, EMAIL) VALUES (50, 'Vicente', 'Palacios', 22, 'vicente.palacios@example.com');
---
+---------------------------------------------------------------------------------------------------------------------------------------
 -- Insertar datos en la tabla TEACHER
 INSERT INTO TEACHER (TEACHERID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE, DIRECCION, HIRE_DATE, SALARY) VALUES (1, 'Juan', 'Pérez', 45, 'juan.perez@example.com', '555-1234', 'Calle Falsa 123', '2010-08-15', 45000.50);
 INSERT INTO TEACHER (TEACHERID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE, DIRECCION, HIRE_DATE, SALARY) VALUES (2, 'María', 'Gómez', 39, 'maria.gomez@example.com', '555-5678', 'Av. Siempre Viva 742', '2011-05-10', 47000.75);
@@ -72,6 +72,7 @@ INSERT INTO TEACHER (TEACHERID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE, DIRECCIO
 INSERT INTO TEACHER (TEACHERID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE, DIRECCION, HIRE_DATE, SALARY) VALUES (18, 'Elena', 'Morales', 42, 'elena.morales@example.com', '555-8190', 'Av. del Norte 313', '2022-11-15', 48000.65);
 INSERT INTO TEACHER (TEACHERID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE, DIRECCION, HIRE_DATE, SALARY) VALUES (19, 'Anaa', 'Suárez', 46, 'hugo.suarez@example.com', '555-0213', 'Calle de la Estrella 414', '2004-04-12', 51000.70);
 INSERT INTO TEACHER (TEACHERID, FIRSTNAME, LASTNAME, AGE, EMAIL, PHONE, DIRECCION, HIRE_DATE, SALARY) VALUES (20, 'Isabel', 'Herrera', 31, 'isabel.herrera@example.com', '555-2245', 'Av. del Sol 515', '2023-03-22', 43000.00);
+--------------------------------------------------------------------------------------------------------------------------------
 -- Inserción de cursos en la tabla COURSES
 INSERT INTO COURSES (COURSESID, COURSESNAME, DESCRIPCION, TEACHERID, DURATIONMINUTS)
 VALUES
@@ -116,7 +117,6 @@ VALUES
 (39, 'Análisis de Grandes Volúmenes de Datos', 'Técnicas para analizar grandes volúmenes de datos.', 39, 300),
 (40, 'Tendencias y Tecnologías Futuras en Data Engineering', 'Exploración de las últimas tendencias y tecnologías en ingeniería de datos.', 40, 310);
 -- Diferencias entre inserción masiva e inserciones individuales
-
 -- Inserción Masiva:
 -- 1. Eficiencia y Rendimiento: 
 -- La sentencia de inserción masiva (INSERT INTO ... VALUES (...) para múltiples filas) 
@@ -159,34 +159,12 @@ VALUES
 -- 4. Transacciones y Bloqueos:
 -- Cada inserción puede generar un bloqueo separado, lo que podría afectar el rendimiento 
 -- si se están realizando muchas inserciones al mismo tiempo en un entorno con alta concurrencia.
-
 -- Resumen:
 -- Inserción Masiva es preferible para grandes volúmenes de datos debido a su eficiencia y 
 -- menor sobrecarga transaccional.
 -- Inserciones Individuales pueden ser útiles para casos donde se manejan pocas filas o 
 -- se necesita un control más granular sobre cada inserción.
-
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (1, 101, '2024-01-10');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (2, 102, '2024-01-12');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (3, 101, '2024-01-15');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (4, 103, '2024-01-17');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (5, 101, '2024-01-20');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (6, 104, '2024-01-22');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (7, 102, '2024-01-25');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (8, 103, '2024-01-27');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (9, 104, '2024-02-01');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (10, 101, '2024-02-03');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (11, 102, '2024-02-05');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (12, 103, '2024-02-07');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (13, 104, '2024-02-10');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (14, 101, '2024-02-12');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (15, 102, '2024-02-15');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (16, 103, '2024-02-17');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (17, 104, '2024-02-20');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (18, 101, '2024-02-22');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (19, 102, '2024-02-25');
-INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (20, 103, '2024-02-27');
-----------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 -- Inserciones para la tabla STUDENT_COURSE
 
 -- Estudiante 1
@@ -221,20 +199,25 @@ INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES (5, 25
 
 -- Agregar más inserciones para los estudiantes 6 a 50
 
--- Ejemplo de un patrón para el resto de los estudiantes
-DO $$ 
+DO $$  -- Inicia un bloque de código PL/pgSQL para ejecutar varias instrucciones en un solo bloque.
 DECLARE 
-    stud_id INT;
-    courses_count INT;
-    course_id INT;
-    enroll_date DATE;
+    stud_id INT;  -- Declaración de una variable para almacenar el ID del estudiante.
+    courses_count INT;  -- Declaración de una variable para almacenar la cantidad de cursos asignados a un estudiante.
+    course_id INT;  -- Declaración de una variable para almacenar el ID de cada curso asignado a un estudiante.
+    enroll_date DATE;  -- Declaración de una variable para almacenar la fecha de inscripción de cada curso.
 BEGIN
+    -- Bucle que itera a través de los estudiantes con IDs del 6 al 50.
     FOR stud_id IN 6..50 LOOP
+        -- Genera un número aleatorio de 1 a 8 para determinar cuántos cursos asignar al estudiante actual.
         courses_count := (FLOOR(RANDOM() * 8) + 1)::INT; -- Asignar aleatoriamente de 1 a 8 cursos
+        -- Bucle que selecciona aleatoriamente 'courses_count' cursos y asigna uno a uno al estudiante actual.
         FOR course_id IN (SELECT COURSESID FROM COURSES ORDER BY RANDOM() LIMIT courses_count) LOOP
+            -- Genera una fecha de inscripción aleatoria en el año 2023.
             enroll_date := DATE '2023-01-01' + (FLOOR(RANDOM() * 365))::INT; -- Fecha aleatoria en 2023
+            -- Inserta la relación estudiante-curso con la fecha de inscripción en la tabla STUDENT_COURSE.
             EXECUTE 'INSERT INTO STUDENT_COURSE (STUDENTID, COURSESID, ENROLLMENT_DATE) VALUES ($1, $2, $3)'
-            USING stud_id, course_id, enroll_date;
-        END LOOP;
-    END LOOP;
-END $$;
+            USING stud_id, course_id, enroll_date;  -- Utiliza los valores generados para hacer la inserción.
+        END LOOP;  -- Fin del bucle interno que asigna cursos a un estudiante.
+    END LOOP;  -- Fin del bucle externo que itera sobre cada estudiante.
+END $$;  -- Finaliza el bloque PL/pgSQL.
+
