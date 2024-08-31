@@ -66,3 +66,43 @@ SELECT ProductID, SUM(Quantity) AS TotalSold: Selecciona la columna ProductID y 
 FROM SALES: Especifica la tabla de la que se están obteniendo los datos.
 GROUP BY ProductID: Agrupa las filas de la tabla SALES por cada ProductID, de manera que el cálculo de SUM(Quantity) se realiza para cada grupo de ProductID.
 El resultado de esta consulta será una lista de cada ProductID con la cantidad total vendida, agrupando todos los registros que corresponden al mismo producto.
+----------------------------------------------------------------------------------------------------------------
+El HAVING en SQL es una cláusula que se utiliza para filtrar los resultados de una consulta después de que se han agrupado con la cláusula GROUP BY.
+
+Conceptos Básicos:
+GROUP BY: Agrupa las filas que tienen los mismos valores en columnas específicas en conjuntos de filas resumidos, como calcular la suma o el promedio de un grupo.
+
+HAVING: Se utiliza para filtrar estos grupos creados por GROUP BY basándose en condiciones específicas.
+
+¿Por Qué Necesitamos HAVING?
+Imagina que quieres contar cuántos estudiantes hay en cada curso en una escuela. Usas GROUP BY para agrupar los estudiantes por curso. Luego, si solo te interesan los cursos con más de 10 estudiantes, necesitas filtrar esos grupos. Ahí es donde entra HAVING.
+
+Ejemplo Paso a Paso:
+Supongamos que tienes una tabla llamada STUDENT_COURSE que tiene las columnas COURSEID (el ID del curso) y STUDENTID (el ID del estudiante). Quieres saber cuántos estudiantes hay en cada curso, pero solo mostrar los cursos que tienen más de 10 estudiantes.
+
+SELECT COURSEID, COUNT(STUDENTID) AS STUDENT_COUNT
+FROM STUDENT_COURSE
+GROUP BY COURSEID
+HAVING COUNT(STUDENTID) > 10;
+
+Explicación del Ejemplo:
+SELECT COURSEID, COUNT(STUDENTID) AS STUDENT_COUNT:
+
+Selecciona el ID del curso (COURSEID) y el número de estudiantes en cada curso (COUNT(STUDENTID)), renombrado como STUDENT_COUNT.
+FROM STUDENT_COURSE:
+
+Indica que estamos tomando los datos de la tabla STUDENT_COURSE.
+GROUP BY COURSEID:
+
+Agrupa los resultados por COURSEID, es decir, todos los estudiantes en el mismo curso se agrupan juntos.
+HAVING COUNT(STUDENTID) > 10:
+
+Filtra estos grupos para mostrar solo aquellos cursos donde el número de estudiantes es mayor que 10.
+Diferencia entre WHERE y HAVING:
+WHERE: Se utiliza para filtrar filas antes de agruparlas con GROUP BY.
+HAVING: Se utiliza para filtrar los grupos creados por GROUP BY.
+Resumen:
+HAVING se usa para aplicar condiciones a los grupos creados después de usar GROUP BY.
+Útil cuando necesitas filtrar resultados agregados, como sumas, conteos o promedios.
+No puede ser utilizado sin GROUP BY.
+En resumen, HAVING es como un filtro especial que solo funciona después de agrupar tus datos.
