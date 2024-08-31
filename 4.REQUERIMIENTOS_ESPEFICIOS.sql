@@ -27,4 +27,5 @@ GROUP BY COURSESID
 HAVING COUNT(STUDENTID) > 6 OR COUNT(STUDENTID) -- Este filtro está incompleto. En SQL, la cláusula HAVING debe tener una condición completa. Debe especificar qué condición adicional se quiere aplicar a COUNT(STUDENTID).
 
 --Ahora debemos sacar el total de los salarios de los instructores
-
+SELECT SUM(SALARY)
+FROM TEACHERS
