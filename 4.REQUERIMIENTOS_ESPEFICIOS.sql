@@ -28,4 +28,33 @@ HAVING COUNT(STUDENTID) > 6 OR COUNT(STUDENTID) -- Este filtro está incompleto.
 
 --Ahora debemos sacar el total de los salarios de los instructores
 SELECT SUM(SALARY)
-FROM TEACHERS
+FROM TEACHER
+
+-- Esta consulta SQL calcula la suma total de los salarios de todos los profesores en la tabla TEACHER.
+SELECT SUM(SALARY) as "Nomina total"  -- SUM(SALARY) suma todos los valores en la columna SALARY. "Nomina total" es el alias que se usa para mostrar el resultado de manera más descriptiva.
+FROM TEACHER;  -- Indica que los datos se están obteniendo de la tabla TEACHER.
+
+--Lo siguientes comandos son muy utilies en el control de inventarios.
+-- Esta consulta selecciona la edad mínima y máxima de los estudiantes
+SELECT MIN(age) AS "MINIMUN AGE",  -- Utiliza la función MIN para encontrar la edad más baja en la columna age
+       MAX(AGE) AS "MAXIMUM AGE"   -- Utiliza la función MAX para encontrar la edad más alta en la columna age
+FROM STUDENTS;                     -- Indica que las funciones se aplican a la tabla STUDENTS
+
+-- Esta consulta selecciona la edad y la edad redondeada de cada estudiante en la tabla STUDENTS
+SELECT age,                    -- Selecciona la columna age de la tabla STUDENTS
+       ROUND(age)              -- Utiliza la función ROUND para redondear el valor de age al número entero más cercano
+FROM STUDENTS;                 -- Indica que los datos se obtienen de la tabla STUDENTS
+-- Esta consulta selecciona el salario y el salario redondeado de cada maestro en la tabla TEACHER
+SELECT salary,                -- Selecciona la columna salary de la tabla TEACHER para mostrar los salarios originales de cada maestro
+       ROUND(salary)          -- Utiliza la función ROUND para redondear el valor de salary al número entero más cercano
+FROM TEACHER;                 -- Indica que los datos se obtienen de la tabla TEACHER
+
+ -- Seleccionar los cursos y contar el número de estudiantes registrados en cada curso
+SELECT coursesid, COUNT(studentid) AS "Alumnos_registrados"
+FROM STUDENT_COURSE
+-- Agrupar los resultados por el ID del curso para contar estudiantes por curso
+GROUP BY coursesid
+-- Filtrar los resultados para mostrar solo aquellos cursos con 4 o más estudiantes,
+-- o aquellos con exactamente 1 estudiante registrado
+HAVING COUNT(studentid) >= 4 
+       OR COUNT(studentid) = 1;
