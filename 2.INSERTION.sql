@@ -324,3 +324,16 @@ for student_id in range(6, 51):  # Para estudiantes con IDs del 6 al 50
 # Guardar cambios y cerrar la conexión
 conn.commit()
 conn.close()
+
+----------------------------------------------------------------
+-- Inserción de 10 productos en la tabla PRODUCTO
+INSERT INTO PRODUCTO (IDPRODUCTO, NOMBRE, IDMARCA, PRECIO) VALUES (1, 'Laptop Dell Inspiron', 1, 750.499);
+INSERT INTO PRODUCTO (IDPRODUCTO, NOMBRE, IDMARCA, PRECIO) VALUES (2, 'Monitor Samsung 24"', 2, 199.990);
+INSERT INTO PRODUCTO (IDPRODUCTO, NOMBRE, IDMARCA, PRECIO) VALUES (3, 'Teclado Mecánico Logitech', 3, 89.999);
+INSERT INTO PRODUCTO (IDPRODUCTO, NOMBRE, IDMARCA, PRECIO) VALUES (4, 'Ratón Inalámbrico Microsoft', 4, 25.750);
+INSERT INTO PRODUCTO (IDPRODUCTO, NOMBRE, IDMARCA, PRECIO) VALUES (5, 'Disco Duro Externo Seagate 1TB', 5, 59.990);
+INSERT INTO PRODUCTO (IDPRODUCTO, NOMBRE, IDMARCA, PRECIO) VALUES (6, 'Impresora Multifuncional HP', 6, 129.499);
+INSERT INTO PRODUCTO (IDPRODUCTO, NOMBRE, IDMARCA, PRECIO) VALUES (7, 'Auriculares Sony WH-1000XM4', 7, 349.999);
+INSERT INTO PRODUCTO (IDPRODUCTO, NOMBRE, IDMARCA, PRECIO) VALUES (8, 'Tablet Apple iPad Air', 8, 599.000);
+INSERT INTO PRODUCTO (IDPRODUCTO, NOMBRE, IDMARCA, PRECIO) VALUES (9, 'Smartphone Samsung Galaxy S21', 2, 799.990);
+INSERT INTO PRODUCTO (IDPRODUCTO, NOMBRE, IDMARCA, PRECIO) VALUES (10, 'Cámara Canon EOS Rebel T7', 9, 449.995);
