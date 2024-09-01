@@ -106,3 +106,4 @@ HAVING se usa para aplicar condiciones a los grupos creados después de usar GRO
 Útil cuando necesitas filtrar resultados agregados, como sumas, conteos o promedios.
 No puede ser utilizado sin GROUP BY.
 En resumen, HAVING es como un filtro especial que solo funciona después de agrupar tus datos.
+------------------------------------------------------------------------------------------------------------------------
