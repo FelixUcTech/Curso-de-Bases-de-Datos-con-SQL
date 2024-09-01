@@ -28,4 +28,11 @@ INNER JOIN courses ON enrollments.course = courses.course;
 --Características Clave del FULL OUTER JOIN:
 --Incluye todas las filas: Devuelve todas las filas de ambas tablas. Si no hay una coincidencia en una tabla, las filas de esa tabla aún se muestran en el resultado, con valores nulos en las columnas de la otra tabla.
 --Coincidencias y no coincidencias: Muestra tanto las filas coincidentes (donde las filas de ambas tablas cumplen la condición de la unión) como las no coincidentes (donde una fila de una tabla no tiene una coincidencia correspondiente en la otra tabla).
---El cross join, es un 
+--El cross join, es un producto en función de las coincidencias de cada fila de la tabla A con la Tabla b
+
+
+SELECT *
+FROM PRODUCTO 
+INNER JOIN MARCA ON PRODUCTO.MARCA_ID = MARCA.IDMARCA
+
+
