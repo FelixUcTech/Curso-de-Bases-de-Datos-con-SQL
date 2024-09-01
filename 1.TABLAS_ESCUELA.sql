@@ -42,3 +42,15 @@ CREATE TABLE STUDENT_COURSE (
     FOREIGN KEY (STUDENTID) REFERENCES STUDENTS(STUDENTID),  -- Nos aseguramos de que el STUDENTID que almacenamos aquí corresponda a un estudiante existente en la tabla STUDENTS.
     FOREIGN KEY (COURSESID) REFERENCES COURSES(COURSESID)  -- Y aquí, que el COURSESID corresponda a un curso existente en la tabla COURSES.
 );   
+--EJERCICIO DE DE JOINS
+-- Crear la tabla MARCA con dos columnas: IDMARCA y NOMBRE
+CREATE TABLE MARCA (
+    IDMARCA INT PRIMARY KEY,        -- Clave primaria para identificar de forma única cada marca.
+    NOMBRE VARCHAR(100)             -- Nombre de la marca con un máximo de 100 caracteres.
+);
+-- Crear la tabla PRODUCTO con dos columnas: IDPRODUCTO y NOMBRE
+CREATE TABLE PRODUCTO (
+    IDPRODUCTO INT PRIMARY KEY,     -- Clave primaria para identificar de forma única cada producto.
+    NOMBRE VARCHAR(100)             -- Nombre del producto con un máximo de 100 caracteres.
+);
+
