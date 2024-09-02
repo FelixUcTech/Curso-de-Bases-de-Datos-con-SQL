@@ -31,8 +31,38 @@ INNER JOIN courses ON enrollments.course = courses.course;
 --El cross join, es un producto en función de las coincidencias de cada fila de la tabla A con la Tabla b
 
 
+-- Selecciona todos los campos de las tablas PRODUCTO y MARCA
 SELECT *
+-- Realiza un INNER JOIN entre las tablas PRODUCTO y MARCA
 FROM PRODUCTO 
-INNER JOIN MARCA ON PRODUCTO.MARCA_ID = MARCA.IDMARCA
+-- Especifica la condición de unión
+INNER JOIN MARCA 
+-- La condición de unión es que el MARCA_ID en PRODUCTO debe ser igual al IDMARCA en MARCA
+ON PRODUCTO.MARCA_ID = MARCA.IDMARCA;
+
+--Referenciación Entre producto y p falta AS, pero en este caso se da la opción de no específicarla, lo mismo aplica con marca
+-- Selecciona todos los campos de las tablas PRODUCTO y MARCA
+SELECT *
+-- Realiza un INNER JOIN entre las tablas PRODUCTO y MARCA
+FROM PRODUCTO P
+-- Especifica la condición de unión
+INNER JOIN MARCA M
+-- La condición de unión es que el MARCA_ID en PRODUCTO debe ser igual al IDMARCA en MARCA
+ON P.MARCA_ID = M.IDMARCA;
+
+-- Selecciona todos los campos de las tablas PRODUCTO y MARCA
+SELECT p.IDPRODUCTO, p.NOMBRE, m.IDMARCA, m.NOMBRE
+-- Realiza un INNER JOIN entre las tablas PRODUCTO y MARCA
+FROM PRODUCTO P
+-- Especifica la condición de unión
+INNER JOIN MARCA M
+-- La condición de unión es que el MARCA_ID en PRODUCTO debe ser igual al IDMARCA en MARCA
+ON P.MARCA_ID = M.IDMARCA;
+--Esto es una mala práctica, para no regresar en los cambios y verficar a que hace referencia, por ello es importante desde un inicio revisar bien el nombre de la tabla a la que hacemos referencia.
+
+
+
+
+
 
 
