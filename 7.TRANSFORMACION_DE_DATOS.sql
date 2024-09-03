@@ -61,3 +61,88 @@ END;
 --En este ejemplo, se crea un trigger llamado update_salary que se activa después de que se actualiza una fila en la tabla EMPLOYEES. Cuando el salario de un empleado se actualiza a un valor mayor que el salario anterior, este trigger registra la información relevante en una tabla llamada SALARY_HISTORY.
 --Ambos CREATE INDEX y TRIGGER son herramientas poderosas en SQL que permiten mejorar el rendimiento y la funcionalidad de una base de datos, respectivamente.
 
+-- VISTAS TEMPORALES EN SQL
+
+/*
+Las vistas temporales son vistas que solo existen durante la duración de una sesión de base de datos.
+Una vez que la sesión se cierra, la vista temporal se elimina automáticamente.
+Son útiles para consultas complejas que requieren resultados intermedios sin crear una tabla permanente.
+*/
+
+-- Ejemplo de creación de una vista temporal
+CREATE TEMPORARY VIEW recent_orders AS
+SELECT *
+FROM ORDERS
+WHERE order_date >= DATE('now', '-1 month');
+
+-- Esta vista temporal 'recent_orders' muestra todos los pedidos realizados en el último mes.
+-- Desaparecerá automáticamente cuando la sesión de la base de datos termine.
+
+-- VISTAS MATERIALIZADAS EN SQL
+
+/*
+Las vistas materializadas son similares a las vistas regulares, pero con una diferencia clave: 
+almacenan físicamente los resultados de la consulta en la base de datos. 
+Esto permite un acceso rápido a los datos, ya que no es necesario ejecutar la consulta base cada vez.
+Son útiles para optimizar el rendimiento en consultas complejas o en conjuntos de datos grandes.
+*/
+
+-- Ejemplo de creación de una vista materializada
+CREATE MATERIALIZED VIEW sales_summary AS
+SELECT product_id, SUM(sales_amount) AS total_sales
+FROM SALES
+GROUP BY product_id;
+
+-- Esta vista materializada 'sales_summary' almacena el total de ventas por producto.
+-- A diferencia de una vista normal, 'sales_summary' almacena los datos resultantes en la base de datos,
+-- permitiendo un acceso más rápido a los datos.
+-- ACTUALIZACIÓN DE UNA VISTA MATERIALIZADA
+/*
+Una vista materializada necesita ser actualizada manualmente si los datos subyacentes cambian.
+Esto se puede hacer usando el comando REFRESH MATERIALIZED VIEW.
+*/
+-- Actualizar la vista materializada 'sales_summary'
+REFRESH MATERIALIZED VIEW sales_summary;
+-- La vista materializada 'sales_summary' ahora refleja los datos más recientes de la tabla SALES.
+
+-- CTEs (Common Table Expressions) en SQL
+-- Una CTE (Common Table Expression) es una expresión de tabla común que proporciona un nombre temporal a un conjunto de resultados.
+-- Esto permite dividir consultas complejas en partes más manejables y hace que el código sea más legible.
+-- Las CTEs sólo existen durante la ejecución de la consulta en la que se definen y desaparecen después de que la consulta se ejecuta.
+-- Sintaxis básica de una CTE:
+-- WITH CTE_name AS (
+--     -- Aquí va la subconsulta o la expresión de la tabla común
+--     SELECT column1, column2, ...
+--     FROM table_name
+--     WHERE condition
+-- )
+-- -- Consulta principal que utiliza la CTE
+-- SELECT column1, column2, ...
+-- FROM CTE_name
+-- WHERE condition;
+-- Ejemplo de uso de una CTE:
+WITH OrderCount AS (
+    -- Definimos la CTE llamada OrderCount
+    -- Calcula el número total de pedidos por cada cliente
+    SELECT customer_id, COUNT(order_id) AS num_orders
+    FROM ORDERS
+    GROUP BY customer_id
+)
+-- Utilizamos la CTE OrderCount en la consulta principal
+SELECT customer_id
+FROM OrderCount
+WHERE num_orders > 5;
+-- En este ejemplo:
+-- 1. La CTE 'OrderCount' se define primero, calculando el número de pedidos por cliente.
+-- 2. La consulta principal selecciona sólo aquellos clientes ('customer_id') que tienen más de 5 pedidos ('num_orders > 5').
+--Otro ejemplo:
+WITH AverageSalaries AS(
+    SELECT d.DepartmentName, AVG(e.Salary) AS AvgSalary
+    FROM Employees e
+    JOIN Departments d ON e.DepartmentID = d.DepartmentID
+    GROUP BY d.DepartmentNanme
+)
+SELECT DepartmentName, AvgSalary
+FROM AverageSalaries
+WHERE AvgSalary > 65000
+
