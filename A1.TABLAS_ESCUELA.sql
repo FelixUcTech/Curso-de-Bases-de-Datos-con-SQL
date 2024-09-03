@@ -43,7 +43,6 @@ CREATE TABLE STUDENT_COURSE (
     FOREIGN KEY (COURSESID) REFERENCES COURSES(COURSESID)  -- Y aquí, que el COURSESID corresponda a un curso existente en la tabla COURSES.
 );   
 
-
 --EJERCICIO DE DE JOINS
 -- Crear la tabla MARCA
 CREATE TABLE MARCA (
@@ -59,4 +58,3 @@ CREATE TABLE PRODUCTO (
     PRECIO DECIMAL(10, 3),          -- Precio del producto con precisión decimal
     FOREIGN KEY (MARCA_ID) REFERENCES MARCA(IDMARCA) -- Definición de la clave foránea
 );
-
