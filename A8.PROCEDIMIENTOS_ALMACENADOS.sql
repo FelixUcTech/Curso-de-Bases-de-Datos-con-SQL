@@ -12,7 +12,7 @@ BEGIN
 END;
 --Como se ejecuta la informaicón?, dependiendo el leguaje qué estemos utilizando
 --Opciión con CALL
-
+CALL IngresoEmpleado('Félix', 'Uc', 27, 80000, '04-09-2024');
 --Opción con EXEC
-
+EXEC IngresoEmpleado('Félix', 'Uc', 27, 80000, '04-09-2024');
 
