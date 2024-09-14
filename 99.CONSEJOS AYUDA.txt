@@ -107,3 +107,62 @@ HAVING se usa para aplicar condiciones a los grupos creados después de usar GRO
 No puede ser utilizado sin GROUP BY.
 En resumen, HAVING es como un filtro especial que solo funciona después de agrupar tus datos.
 ------------------------------------------------------------------------------------------------------------------------
+-- Aspectos Positivos de MySQL Workbench:
+
+-- 1. Interfaz Gráfica Intuitiva:
+--    - MySQL Workbench ofrece una interfaz gráfica amigable y fácil de usar.
+--    - Simplifica tareas como la creación, modificación y eliminación de tablas, vistas y procedimientos almacenados.
+--    - Es ideal para quienes prefieren una herramienta visual sobre la línea de comandos.
+
+-- 2. Modelo de Diseño de Bases de Datos:
+--    - Permite crear diagramas ERD (Entidad-Relación) para diseñar bases de datos visualmente.
+--    - Puedes exportar modelos a SQL y generar diagramas a partir de bases de datos existentes.
+
+-- 3. Compatibilidad con Múltiples Plataformas:
+--    - MySQL Workbench está disponible en Windows, macOS y Linux, permitiendo acceso a una amplia gama de usuarios.
+
+-- 4. Soporte para Consultas SQL:
+--    - Incluye un editor SQL con resaltado de sintaxis y autocompletado, lo que facilita la creación de consultas.
+--    - Permite ejecutar, escribir y optimizar consultas SQL directamente desde la herramienta.
+
+-- 5. Funciones de Administración:
+--    - Ofrece herramientas para gestionar usuarios, permisos, realizar copias de seguridad, restaurar bases de datos y monitorear el rendimiento del servidor MySQL.
+
+-- 6. Integración de Copias de Seguridad y Restauración:
+--    - Proporciona herramientas para realizar backups y restaurar bases de datos sin necesidad de línea de comandos.
+
+-- Aspectos Negativos de MySQL Workbench:
+
+-- 1. Rendimiento Lento con Grandes Bases de Datos:
+--    - Puede volverse lento y consumir muchos recursos cuando se trabaja con bases de datos grandes o complejas.
+--    - El rendimiento puede disminuir al cargar grandes volúmenes de datos o trabajar con diagramas ERD extensos.
+
+-- 2. Errores y Fallos Ocasionales:
+--    - Algunos usuarios reportan que MySQL Workbench puede cerrarse inesperadamente o presentar errores en ciertos sistemas operativos.
+
+-- 3. Limitaciones en la Personalización:
+--    - MySQL Workbench tiene menos opciones de personalización en comparación con otras herramientas avanzadas de gestión de bases de datos.
+
+-- 4. Consumo de Recursos:
+--    - Puede ser intensivo en el consumo de recursos del sistema, especialmente cuando se ejecutan varias consultas complejas o se manejan grandes modelos ERD.
+
+-- 5. Falta de Soporte para Otros Motores de Bases de Datos:
+--    - Está diseñado específicamente para MySQL y MariaDB, por lo que no ofrece soporte nativo para otros motores de bases de datos como PostgreSQL o SQL Server.
+
+-- 6. Funciones Avanzadas para Desarrolladores:
+--    - Aunque es completo, no incluye algunas funciones avanzadas como la depuración o herramientas de profiling detalladas, que algunos desarrolladores avanzados podrían necesitar.
+
+-- Resumen:
+
+-- Lo bueno:
+--   - Interfaz gráfica amigable.
+--   - Soporte para modelado de bases de datos y consultas SQL.
+--   - Herramientas de administración integradas.
+--   - Disponible en múltiples plataformas.
+
+-- Lo malo:
+--   - Puede volverse lento con bases de datos grandes.
+--   - Puede fallar ocasionalmente.
+--   - Consume muchos recursos del sistema.
+--   - Está limitado a bases de datos MySQL/MariaDB.
+------------------------------------------------------------------------------------------------------------------------
