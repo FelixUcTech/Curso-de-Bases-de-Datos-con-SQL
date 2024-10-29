@@ -5,6 +5,8 @@
         - [CRUD](#crud)
         - [WHERE](#where)
         - [Business Intelligence (BI)](#business-intelligence-bi)
+            - [¿Qué implica Business Intellig](#qué-implica-business-intelligence)
+            - [¿Por qué es importante Business Intelligence?](#por-qué-es-importante-business-intelligence)
 ## Conceptos claves
 ### CRUD
 El CRUD, acrónimo de "Create, Read, Update, Delete", es un conjunto de operaciones básicas que se realizan en cualquier sistema de gestión de bases de datos.
@@ -35,50 +37,60 @@ Aplica que no siempre es necesario hacer la extracción de todas las columnas pa
 
 ### Business Intelligence (BI)
 
-Business Intelligence (BI), o Inteligencia de Negocios en español, es un conjunto de estrategias, tecnologías, aplicaciones y procesos que se utilizan para recolectar, integrar, analizar y presentar datos empresariales. El objetivo de la BI es ayudar a las organizaciones a tomar decisiones informadas basadas en datos.
+Business Intelligence (BI), o Inteligencia de Negocios en español, es un conjunto de estrategias, tecnologías, aplicaciones y procesos que se utilizan para recolectar, integrar, analizar y presentar datos empresariales. El objetivo de la BI es ayudar a las organizaciones a tomar decisiones informadas en análisis basadas en datos.
 
-¿Qué implica Business Intelligence?
-Recolección de datos: BI implica reunir datos de varias fuentes de la empresa, como sistemas de ventas, CRM, ERP, hojas de cálculo, y más. Esto puede incluir datos financieros, datos de ventas, datos de producción, etc.
+#### ¿Qué implica Business Intelligence?
 
-Almacenamiento de datos: Los datos recolectados se almacenan en bases de datos o almacenes de datos (data warehouses), que están diseñados para facilitar el análisis y la recuperación eficiente de la información.
+*Recolección de datos:* BI implica reunir datos de varias fuentes de la empresa, como sistemas de ventas, CRM, ERP, hojas de cálculo, y más. Esto puede incluir datos financieros, datos de ventas, datos de producción, etc.
 
-Transformación y limpieza de datos: Los datos brutos a menudo se limpian y transforman para garantizar que estén completos, precisos y en un formato adecuado para el análisis.
+*Almacenamiento de datos:* Los datos recolectados se almacenan en bases de datos o almacenes de datos (**data warehouses**), que están diseñados para facilitar el análisis y la recuperación eficiente de la información.
 
-Análisis de datos: Una vez que los datos están preparados, se utilizan diversas técnicas de análisis para descubrir patrones, tendencias y relaciones. Esto puede incluir análisis estadístico, minería de datos (data mining), análisis predictivo, y análisis de big data.
+*Transformación y limpieza de datos:* Los datos brutos a menudo se limpian y transforman para garantizar que estén completos, precisos y en un formato adecuado para el análisis.
 
-Visualización de datos: Los resultados del análisis se presentan en formatos comprensibles y fáciles de interpretar, como dashboards (tableros de control), gráficos, informes, y cuadros. Las herramientas de visualización de datos ayudan a los usuarios a ver tendencias, patrones y detalles en los datos.
+*Análisis de datos:* Una vez que los datos están preparados, se utilizan diversas técnicas de análisis para descubrir patrones, tendencias y relaciones. Esto puede incluir análisis estadístico, minería de datos (data mining), análisis predictivo, y análisis de big data.
 
-Toma de decisiones: Con BI, las organizaciones pueden tomar decisiones basadas en datos precisos y actuales, lo que puede llevar a mejoras en la eficiencia operativa, la satisfacción del cliente, la rentabilidad, y otras áreas clave.
+*Visualización de datos:* Los resultados del análisis se presentan en formatos comprensibles y fáciles de interpretar, como dashboards (tableros de control), gráficos, informes, y cuadros. Las herramientas de visualización de datos ayudan a los usuarios a ver tendencias, patrones y detalles en los datos.
 
-¿Por qué es importante Business Intelligence?
-Mejora la toma de decisiones: Permite a los gerentes y líderes de una empresa tomar decisiones más informadas y basadas en datos.
+*Toma de decisiones:* Con BI, las organizaciones pueden tomar decisiones basadas en datos precisos y actuales, lo que puede llevar a mejoras en la eficiencia operativa, la satisfacción del cliente, la rentabilidad, y otras áreas clave.
+
+#### ¿Por qué es importante Business Intelligence?
+
+*Mejora la toma de decisiones:* Permite a los gerentes y líderes de una empresa tomar decisiones más informadas y basadas en datos.
 Aumenta la eficiencia operativa: Ayuda a identificar áreas de mejora en los procesos de negocio.
 Identificación de oportunidades de negocio: Detecta nuevas oportunidades de mercado y permite a la empresa mantenerse competitiva.
 Seguimiento de rendimiento: Permite a las empresas monitorear sus objetivos y métricas de rendimiento clave (KPIs) en tiempo real.
 Herramientas de Business Intelligence
 Algunas de las herramientas más populares de BI incluyen:
 
-Tableau: Conocido por sus capacidades de visualización de datos.
-Power BI: Una herramienta de Microsoft que integra BI con otras aplicaciones de Office.
+*Tableau:* Conocido por sus capacidades de visualización de datos.
+*Power BI:* Una herramienta de Microsoft que integra BI con otras aplicaciones de Office.
 QlikView: Ofrece análisis de datos intuitivos y visualizaciones interactivas.
-SAP BusinessObjects: Una suite de aplicaciones de BI para un análisis amplio.
-Looker: Una plataforma de análisis de datos que trabaja bien con grandes volúmenes de datos y múltiples fuentes.
+*SAP BusinessObjects:* Una suite de aplicaciones de BI para un análisis amplio.
+
+*Looker:* Una plataforma de análisis de datos que trabaja bien con grandes volúmenes de datos y múltiples fuentes.
+
 En resumen, Business Intelligence permite a las empresas transformar datos en información accionable, lo que les ayuda a tomar decisiones estratégicas y tácticas más efectivas.
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### GRUOP BY
+
 La cláusula GROUP BY en SQL se utiliza para agrupar filas que tienen valores idénticos en una o más columnas y permite realizar cálculos agregados en cada grupo, como sumas, promedios, conteos, etc.
 
-¿Cómo funciona GROUP BY?
+#### ¿Cómo funciona GROUP BY?
+
 Agrupación de datos: GROUP BY agrupa los resultados de una consulta SQL en grupos basados en uno o más columnas especificadas. Cada grupo contiene todas las filas que tienen el mismo valor en las columnas seleccionadas para la agrupación.
 
 Cálculos agregados: Después de agrupar los datos, se pueden aplicar funciones de agregación como SUM(), COUNT(), AVG(), MIN(), y MAX() para realizar cálculos en cada grupo.
 
-Ejemplo básico de uso
+**Ejemplo básico de uso**
+
 Supongamos que tenemos una tabla llamada SALES con las columnas ProductID, Quantity, y Price. Si queremos saber cuántas unidades de cada producto se han vendido, usaríamos GROUP BY junto con la función SUM():
 
+```sql
 SELECT ProductID, SUM(Quantity) AS TotalSold
 FROM SALES
 GROUP BY ProductID;
+```
 
 Explicación del ejemplo:
 
